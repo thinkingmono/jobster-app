@@ -40,7 +40,7 @@ const Profile = () => {
           <FormRow type='text' labelText='last name' name='lastName' value={userData.lastName} onChange={handleChange} />
           <FormRow type='email' name='email' value={userData.email} onChange={handleChange} />
           <FormRow type='text' name='location' value={userData.location} onChange={handleChange} />
-          <button type="submit" className="btn btn-block" disabled={isLoading}>{isLoading ? 'Loading...' : 'Submit'}</button>
+          <button type="submit" className="btn btn-block" disabled={isLoading}>{isLoading ? 'Please wait...' : 'Save Changes'}</button>
         </div>
       </form>
     </Wrapper>
