@@ -2,7 +2,7 @@ import { FormRow, FormRowSelect } from "../../components"
 import Wrapper from "../../assets/wrappers/DashboardFormPage"
 import { useDispatch, useSelector } from "react-redux"
 import { toast } from "react-toastify"
-import { handleChange, clearValues, createJob } from "../../features/job/jobSlice"
+import { handleChange, clearValues, createJob, editJob } from "../../features/job/jobSlice"
 import { useEffect } from "react"
 
 const AddJob = () => {
@@ -27,9 +27,14 @@ const AddJob = () => {
   }
 
   useEffect(() => {
+    if (isEditing) {
+      dispatch(editJob({ jobId: editJobId, job: { position, company, jobLocation, jobType, status } }));
+      return;
+    }
+
     if (!isEditing) {
       // console.log(user.location);
-      dispatch(handleChange({name: 'jobLocation', value: user.location}));
+      dispatch(handleChange({ name: 'jobLocation', value: user.location }));
     }
   }, [])
 
