@@ -63,6 +63,7 @@ const Register = () => {
         <FormRow labelText='Email' type='email' name='email' value={values.email} onChange={handleChange} />
         <FormRow labelText='Password' type='password' name='password' value={values.password} onChange={handleChange} />
         <button type="submit" className="btn btn-block" disabled={isLoading}>{isLoading ? 'loading ...' : 'Submit'}</button>
+        <button type="button" className="btn btn-block btn-hipster" disabled={isLoading} onClick={() => dispatch(loginUser({ email: 'testUser@test.com', password: 'secret' }))}>{isLoading ? 'loading ...' : 'demo'}</button>
         <p>
           {values.isMember ? 'Not a member yet?' : 'Already a member?'}
           <button type="button" onClick={toggleMember} className="member-btn">{values.isMember ? 'Register' : 'Login'}</button>
