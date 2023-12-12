@@ -40,7 +40,7 @@ export const editJobThunk = async ({ jobId, job }, thunkAPI) => {
     try {
         // const response = await authFetch.patch(`/jobs/${jobId}`, job, authHeader(thunkAPI));*
         const response = await authFetch.patch(`/jobs/${jobId}`, job);
-        console.log(response);
+        // console.log(response);
         thunkAPI.dispatch(clearValues());
         return response.data;
     } catch (error) {

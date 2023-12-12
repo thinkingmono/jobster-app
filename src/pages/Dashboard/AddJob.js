@@ -16,6 +16,12 @@ const AddJob = () => {
       toast.error('Please fill out all fields');
       return;
     }
+
+    if (isEditing) {
+      dispatch(editJob({ jobId: editJobId, job: { position, company, jobLocation, jobType, status } }));
+      return;
+    }
+
     dispatch(createJob({ position, company, jobLocation, jobType, status }));
   }
 
@@ -27,11 +33,6 @@ const AddJob = () => {
   }
 
   useEffect(() => {
-    if (isEditing) {
-      dispatch(editJob({ jobId: editJobId, job: { position, company, jobLocation, jobType, status } }));
-      return;
-    }
-
     if (!isEditing) {
       // console.log(user.location);
       dispatch(handleChange({ name: 'jobLocation', value: user.location }));

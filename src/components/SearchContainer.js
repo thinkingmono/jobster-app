@@ -27,6 +27,7 @@ const SearchContainer = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setLocalSearch('');
         dispatch(clearFilters());
     }
 
