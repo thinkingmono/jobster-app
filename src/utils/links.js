@@ -3,6 +3,7 @@ import { MdQueryStats } from 'react-icons/md';
 import { FaWpforms } from 'react-icons/fa';
 import { ImProfile } from 'react-icons/im';
 
+//Navigation Links for sidebar.
 const links = [
     {
         id: 1,

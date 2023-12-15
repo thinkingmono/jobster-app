@@ -1,5 +1,6 @@
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts"
 
+//Chart bar graph in all stats page using recharts library.
 const ChartBar = ({ data }) => {
   return (
     <ResponsiveContainer width='100%' height={300}>

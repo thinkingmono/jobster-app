@@ -3,8 +3,12 @@ import StatItem from "./StatItem"
 import Wrapper from "../assets/wrappers/StatsContainer"
 import { useSelector } from "react-redux"
 
+//Stat item cards.
 const StatsContainer = () => {
+    //Destructure stats from allJobs store.
     const { stats } = useSelector((store) => store.allJobs);
+
+    //Default job states array. Capture each state quantity.
     const defaultStates = [
         {
             title: 'pending applications',
@@ -30,6 +34,7 @@ const StatsContainer = () => {
     ]
     return (
         <Wrapper>
+            {/*Render stat cards through map*/}
             {defaultStates.map((item, index) => {
                 return <StatItem key={index} {...item} />
             })}

@@ -1,6 +1,6 @@
 import Wrapper from "../assets/wrappers/JobInfo"
 
-
+//Icon | text render information into JobCard.
 const JobInfo = ({ icon, text }) => {
     return (
         <Wrapper>

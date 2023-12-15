@@ -1,5 +1,6 @@
 import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts"
 
+//Chart area graph in all stats page using recharts library.
 const ChartArea = ({ data }) => {
     return (
         <ResponsiveContainer width='100%' height={300}>

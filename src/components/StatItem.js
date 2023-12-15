@@ -1,5 +1,6 @@
 import Wrapper from "../assets/wrappers/StatItem"
 
+//Stat card which shows job's state (declined, pending, interviwed). Destructured stat info.
 const StatItem = ({ count, title, icon, color, bcg }) => {
     return (
         <Wrapper color={color} bcg={bcg}>

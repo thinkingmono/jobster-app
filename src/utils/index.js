@@ -2,10 +2,12 @@ import axios from "axios";
 import { getUserFromLocalStorage } from "./localStorage";
 import { clearStore } from "../features/user/userSlice";
 
+//Axios custom instance creation. Set server baseUrl for queries.
 const authFetch = axios.create({
     baseURL: 'https://jobify-prod.herokuapp.com/api/v1/toolkit'
 });
 
+//Set authorization header into custom instance if there is an user stores into browser's local storage.
 authFetch.interceptors.request.use(
     (config) => {
         const user = getUserFromLocalStorage();
@@ -19,6 +21,7 @@ authFetch.interceptors.request.use(
     }
 )
 
+//Unauthorize error handler function. Check if error cached is a 401. If it is clear user session and logs out.
 export const checkForUnauthorizedResponse = (error, thunkAPI) => {
     console.log(error);
     if (error.response.status === 401) {

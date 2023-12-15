@@ -9,6 +9,7 @@ import { store } from './store';
 const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(
+  //Wrap App into Provider redux component and pass store as a parameter to enable redux use in the app.
   <Provider store={store}>
     <App tab='home' />
   </Provider>

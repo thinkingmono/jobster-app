@@ -1,5 +1,5 @@
 
-
+//Custom form field component. Use destructured props to set field.
 const FormRow = ({ labelText, name, type, value, onChange }) => {
     return (
         <div className="form-row">
