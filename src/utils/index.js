@@ -4,7 +4,8 @@ import { clearStore } from "../features/user/userSlice";
 
 //Axios custom instance creation. Set server baseUrl for queries.
 const authFetch = axios.create({
-    baseURL: 'https://jobify-prod.herokuapp.com/api/v1/toolkit'
+    // baseURL: 'http://localhost:5000/api/v1'
+    baseURL: 'https://jobster-server-alejandrowebdev.onrender.com/api/v1'
 });
 
 //Set authorization header into custom instance if there is an user stores into browser's local storage.
